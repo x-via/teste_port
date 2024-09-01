@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Port Teste X-via</title>
+    <style>
+        body {
+            background-color: #2F4F4F;
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        h1 {
+            color: #FFFFFF;
+        }
+        h2 {
+            color: #32CD32;
+            margin-bottom: 20px;
+        }
+        form {
+            display: inline-block;
+            text-align: left;
+            background-color: #3E8E41;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        label {
+            font-weight: bold;
+            margin-right: 10px;
+        }
+        input[type="text"], input[type="number"] {
+            padding: 5px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border: none;
+        }
+        input[type="submit"] {
+            background-color: #32CD32;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #228B22;
+        }
+        .separator {
+            border-bottom: 2px solid white;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Port Teste X-via</h1>
+    <h2>Teste de Conexão</h2>
+    <form action="/check" method="post">
+        <label for="host">Host:</label>
+        <input type="text" id="host" name="host" required><br><br>
+        <div class="separator"></div>
+        <label for="ports">Portas (separadas por vírgula):</label>
+        <input type="text" id="ports" name="ports" required><br><br>
+        <div class="separator"></div>
+        <label for="dns_name">Nome DNS:</label>
+        <input type="text" id="dns_name" name="dns_name"><br><br>
+        <div class="separator"></div>
+        <label for="route_check">Verificar Rota:</label>
+        <select id="route_check" name="route_check">
+            <option value="dig">Dig</option>
+            <option value="tracert">Traceroute</option>
+        </select><br><br>
+        <input type="submit" value="Testar">
+    </form>
+</body>
+</html>

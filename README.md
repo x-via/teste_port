@@ -13,6 +13,8 @@ Linux
 python3 -m venv myenv
 source myenv/bin/activate
 
+sudo apt install python3.8-venv
+
 sudo pip install flask
 
 pip install dnspython

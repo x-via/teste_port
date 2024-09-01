@@ -15,9 +15,9 @@ source myenv/bin/activate
 
 sudo apt install python3.8-venv
 
-sudo pip install flask
+sudo apt install pip
 
-pip install dnspython
+sudo pip install dnspython
 
 sudo pip install flask
 

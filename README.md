@@ -9,6 +9,7 @@ Install Bibliotecas Mac
 pip install flask requests
 --------------------------------
 Linux
+--------------------------------
 python3 -m venv myenv
 source myenv/bin/activate
 

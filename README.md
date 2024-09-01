@@ -1,10 +1,11 @@
 # Instalando o python linux
 
 verificando o python instalado
-which python3
 --------------------------------
-Install Bibliotecas
-Mac
+which python3
+
+Install Bibliotecas Mac
+
 pip install flask requests
 --------------------------------
 Linux

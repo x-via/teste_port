@@ -5,10 +5,11 @@ verificando o python instalado
 which python3
 
 Install Bibliotecas Mac
-pip install flask requests
 
 Linux
 --------------------------------
+pip install flask requests
+
 python3 -m venv myenv
 source myenv/bin/activate
 

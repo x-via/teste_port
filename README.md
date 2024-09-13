@@ -2,12 +2,15 @@
 
     verificando o python instalado
     which python3
+    
+    Criando ambiente virtual 
+    python3 -m venv venv
+    Ative o env 
+    source venv/bin/activate
 
     Instale o python 
     sudo apt install python3.10-venv
-
-
-Install Bibliotecas Mac
+    sudo apt install python3-pip
 
 Linux
 --------------------------------

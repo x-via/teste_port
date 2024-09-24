@@ -12,18 +12,15 @@
         {% endfor %}
     </ul>
     
-    {% if dns_name %}
+    {% if selected_dns %}
     <h2>Resolução DNS</h2>
-    <p>Nome DNS: {{ dns_name }}</p>
+    <p>Nome DNS: {{ selected_dns }}</p>
     {% if dns_resolution %}
         <p>Endereços IP: {{ dns_resolution | join(', ') }}</p>
     {% else %}
         <p>Falha ao resolver DNS</p>
     {% endif %}
     {% endif %}
-    
-    <h2>Resultado da Verificação de Rota ({{ route_method }})</h2>
-    <pre>{{ route_result }}</pre>
     
     <a href="/">Voltar</a>
 </body>

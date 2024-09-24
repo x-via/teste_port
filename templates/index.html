@@ -65,6 +65,15 @@
 
     <div class="container">
         <h1>Port Teste X-via</h1>
+
+        <!-- Formulário para cadastrar DNS -->
+        <form action="/register_dns" method="post">
+            <label for="dns_name">Cadastrar Nome DNS:</label>
+            <input type="text" id="dns_name" name="dns_name" placeholder="Ex: example.com" required>
+            <input type="submit" value="Cadastrar">
+        </form>
+
+        <!-- Formulário para testar portas -->
         <form action="/check" method="post">
             <label for="host">Host:</label>
             <input type="text" id="host" name="host" placeholder="Ex: 192.168.0.1" required>
@@ -72,17 +81,26 @@
             <label for="ports">Portas (separadas por vírgula):</label>
             <input type="text" id="ports" name="ports" placeholder="Ex: 80,443,8080" required>
             
-            <label for="dns_name">Nome DNS:</label>
-            <input type="text" id="dns_name" name="dns_name" placeholder="Ex: example.com">
-            
-            <label for="route_check">Verificar Rota:</label>
-            <select id="route_check" name="route_check">
-                <option value="dig">Dig</option>
-                <option value="tracert">Traceroute</option>
+            <label for="selected_dns">Selecionar DNS:</label>
+            <select id="selected_dns" name="selected_dns">
+                <option value="">Selecione um DNS</option>
+                {% for dns in dns_list %}
+                    <option value="{{ dns }}">{{ dns }}</option>
+                {% endfor %}
             </select>
             
             <input type="submit" value="Testar">
         </form>
+        
+        {% with messages = get_flashed_messages() %}
+          {% if messages %}
+            <ul>
+              {% for message in messages %}
+                <li>{{ message }}</li>
+              {% endfor %}
+            </ul>
+          {% endif %}
+        {% endwith %}
     </div>
 
 </body>
